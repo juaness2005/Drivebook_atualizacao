@@ -1,0 +1,136 @@
+/* Resetando margens e preenchimentos para garantir uniformidade */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página */
+  body {
+    background-color: rgb(9, 8, 44);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Estilos para o cabeçalho */
+  .header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed; /* Tornando o menu fixo */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between; /* Espaça logo à esquerda e menu à direita */
+    align-items: center;
+    background: transparent; /* Menu começa transparente */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+  }
+  
+  /* Quando o usuário rolar a página, o fundo muda */
+  .header.scrolled {
+    background-color: #080036; /* Fundo sólido quando rolar */
+  }
+  
+  /* Logo do menu */
+  .header .branding {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo {
+    line-height: 1;
+}
+
+.header .logo img {
+    max-height: 70px;
+    margin-right: 28px;
+}
+  
+  /* Menu horizontal (itens alinhados na mesma linha da logo) */
+  .navmenu {
+    display: flex; /* Alinha os itens horizontalmente */
+    align-items: center;
+  }
+  
+  .navmenu ul {
+    list-style: none;
+    display: flex; /* Alinha os itens do menu na horizontal */
+    margin-right: 600px; /* Empurra o menu para a direita */
+  }
+  
+  .navmenu li {
+    position: relative;
+    margin-right: 30px; /* Espaçamento entre os itens */
+  }
+  
+  .navmenu li:last-child {
+    margin-right: 0; /* Remove a margem do último item */
+  }
+  
+  .navmenu a {
+    color: rgb(255, 255, 255);
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: color 0.3s, border 0.3s;
+    position: relative;
+  }
+  
+  /* Adicionando o traço ao item selecionado */
+  .navmenu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #5ce1e6; /* Cor do traço */
+    transition: width 0.3s ease-in-out; /* Transição suave */
+  }
+  
+  .navmenu li:hover > a::after, 
+  .navmenu .active > a::after {
+    width: 1000%; 
+    align-items: center;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu .active > a {
+    color: #5ce1e6; 
+  }
+  
+  /* Espaçamento abaixo do menu fixo */
+  .container {
+    padding-top: 100px; /* Deixa o conteúdo abaixo do menu fixo */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px #5CE1E6;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  
+  .container p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    color: white;
+  }
+  
+  .container h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  
+  .container h4 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
